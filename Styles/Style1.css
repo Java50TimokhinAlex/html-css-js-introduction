@@ -1,0 +1,65 @@
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: url(http://s14.pikabu.ru/post_img/big/2022/02/26/7/1645870968184289596.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img {
+    height: 100%;
+}
+
+.board{
+    display: flex;
+    flex-direction: column;
+}
+
+.board-raw{
+    display: flex;
+    flex-direction: raw;
+}
+
+.cell {
+    text-align: center;
+    width: 4.5vw;
+    height: 4.5vw;
+    border: solid 1px darkgrey;
+}
+
+.cell-black{
+    background-color: rgb(24, 20, 20);
+    
+}
+
+.cell-white{
+    background-color: #fff86e;
+}
+.cell-raw{
+    text-align: center;
+    width: 4.5vw;
+    height: 2vw;
+    border: solid 1px black;
+    background-color: #8C4112;
+    
+}
+.cell-column{
+    text-align: center;
+    width: 2vw;
+    height: 4.5vw;
+    border: solid 1px black;
+    background-color: #8C4112;
+}
+.cell-small{
+    width: 2vw;
+    height: 2vw;
+    border: solid 1px black;
+    background-color: #8C4112
+    ;
+}
