@@ -7,7 +7,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
-    background: url(http://s14.pikabu.ru/post_img/big/2022/02/26/7/1645870968184289596.png);
+    background: url(https://media.istockphoto.com/id/1306675949/photo/chess.jpg?b=1&s=170667a&w=0&k=20&c=cO2Z8QZyqwidcA_-o1EhI09vmWD0EW_sfn_MNpGIDX0=);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -30,22 +30,26 @@ img {
     text-align: center;
     width: 4.5vw;
     height: 4.5vw;
-    border: solid 1px darkgrey;
+    
 }
 
 .cell-black{
-    background-color: rgb(24, 20, 20);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1yTsB1X0xP2Qq9-qlNKgKAauLNImC5rgLfQ&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
 .cell-white{
-    background-color: #fff86e;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh3nqTnGRVDxi-rwPFlMWfOSzKeP147ask9Q&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .cell-raw{
     text-align: center;
     width: 4.5vw;
     height: 2vw;
-    border: solid 1px black;
+    
     background-color: #8C4112;
     
 }
@@ -53,13 +57,13 @@ img {
     text-align: center;
     width: 2vw;
     height: 4.5vw;
-    border: solid 1px black;
+    
     background-color: #8C4112;
 }
 .cell-small{
     width: 2vw;
     height: 2vw;
-    border: solid 1px black;
+    
     background-color: #8C4112
     ;
 }
