@@ -4,7 +4,7 @@ html{
 
 body{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 100%;
     background: url(https://media.istockphoto.com/id/1306675949/photo/chess.jpg?b=1&s=170667a&w=0&k=20&c=cO2Z8QZyqwidcA_-o1EhI09vmWD0EW_sfn_MNpGIDX0=);
