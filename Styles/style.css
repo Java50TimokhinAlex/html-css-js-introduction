@@ -1,0 +1,74 @@
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLIJCLqtPwPWxnx4vLAN5IIIp3jRgXd64W0MEeDBlTvlJHRQp4Yke2w6S5ut_Wo8MO3gU&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.logo{
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+
+}
+.main-class{
+  display: flex;
+  flex-direction: column;
+}
+.details-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.details-image{
+  
+  width: 60vw;
+  height: 60vw;
+}
+.dettails-title{
+  display: block;
+  text-align: center;
+  background-color: wheat;
+}
+.thumbnails-list{
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 30vh;                          
+  overflow-y: scroll;
+  list-style: none;
+  justify-content: space-around;
+  padding-left: 0;
+}
+
+.thumbnails-item{
+    margin-top: 2vh;
+}
+.thumbnails-image:hover{
+  border: solid 1px white;
+  border-radius: 100px;
+  box-shadow: 0 0 0 1.5px white, 0 0 15px #666;
+}
+.thumbnails-anchor{
+  text-decoration: none;
+  color: white;
+}
+.thumbnails-image{
+  width: 25vw;
+  height: 15vw;
+
+}
+.thumbnails-title{
+  display: block;
+  text-align: center;  
+  margin-top: -5px;
+}
+.round{
+  border-radius: 100px;
+  box-shadow: 0 0 0 1.5px white, 0 0 15px #666;
+}
