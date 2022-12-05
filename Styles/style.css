@@ -1,74 +1,201 @@
+@font-face {
+  font-family: hussar;
+  src: url(fonts/HussarBoldWeb-ee8d.svg);
+  src: url(fonts/HussarBoldWeb-bf92.woff);
+}
+
+
 html{
   height: 100%;
 }
 body{
   height: 100%;
-  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLIJCLqtPwPWxnx4vLAN5IIIp3jRgXd64W0MEeDBlTvlJHRQp4Yke2w6S5ut_Wo8MO3gU&usqp=CAU);
+  background: url(../images/cars/wallpaper.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
   margin: 0;
+ 
 }
 .logo{
   display: block;
   text-align: center;
-  font-size: 1.5em;
-  text-transform: uppercase;
-
+  background:none;
+  font-size:1.5em;
+  text-transform:uppercase;
+  font-family:hussar;
+}
+h2{
+  margin-top: 25px;
+  margin-bottom: 40px;
 }
 .main-class{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
 }
 .details-container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 25px;
 }
 .details-image{
+  width: 90vw;
+  height: 55vw;
+ 
   
-  width: 60vw;
-  height: 60vw;
 }
-.dettails-title{
+.details-title{
   display: block;
-  text-align: center;
-  background-color: wheat;
+  text-align: left;
+  background:none;
+  font-family: hussar;
 }
 .thumbnails-list{
   display: flex;
   flex-wrap: wrap;
-  max-height: 30vh;                          
+  max-height: 37vh;                          
   overflow-y: scroll;
   list-style: none;
   justify-content: space-around;
   padding-left: 0;
+  margin-top: 25px;
+}
+.thumbnails-item{
+  border: solid 2px white;
+  margin-top: 2vh;
+  border-radius: 25%;
+  overflow: hidden;
 }
 
-.thumbnails-item{
-    margin-top: 2vh;
-}
-.thumbnails-image:hover{
-  border: solid 1px white;
-  border-radius: 100px;
-  box-shadow: 0 0 0 1.5px white, 0 0 15px #666;
-}
 .thumbnails-anchor{
   text-decoration: none;
   color: white;
 }
 .thumbnails-image{
-  width: 30vw;
-  height: 20vw;
+  display: block;
+  width: 25vw;
+  height: 15vw;
 
 }
 .thumbnails-title{
   display: block;
-  text-align: center;  
-  margin-top: -5px;
+  text-align: center;
+  background-color: black;
+  
 }
-.round{
-  border-radius: 100px;
-  box-shadow: 0 0 0 1.5px white, 0 0 15px #666;
+@media (min-width: 560px) 
+{
+  .main-class
+  {
+    flex-direction: row;
+  }
+  .logo{
+    font-size: 1.55em
+  }
+  h2
+  {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  body
+  {
+    background: url(../images/cars/Wallpaper_gorizont.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .thumbnails-list
+  {
+    order: -1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-height: 70vh;
+    justify-content: flex-start;
+    padding-right: 35px;
+    
+  }
+  .thumbnails-item
+  {
+    min-height: 15vw;
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+  .thumbnails-image
+  {
+    width: 20vw;
+    height: 12vw;
+    
+  }
+  .details-image
+  {
+    width: 60vw;
+    height: 35vw;
+  }
+  .details-container
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+  
+}
+@media (min-width: 1000px) 
+{
+  .main-class
+  {
+    flex-direction: row;
+  }
+  .logo{
+    font-size: 2.85em;
+  }
+  h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  body
+  {
+    background: url(../images/cars/Wallpaper_gorizont.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .thumbnails-list
+  {
+    order: -1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-height: 75vh;
+    justify-content: flex-start;
+    padding-right: 35px;
+    
+  }
+  .thumbnails-item
+  {
+    min-height: 16.5vw;
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+  .thumbnails-image
+  {
+    width: 25vw;
+    height: 15vw;
+    
+  }
+  .details-image
+  {
+    width: 60vw;
+    height: 35vw;
+  }
+  .details-container
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+  
+  
 }
