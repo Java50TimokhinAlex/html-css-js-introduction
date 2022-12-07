@@ -8,6 +8,14 @@
 html{
   height: 100%;
 }
+body
+{
+  --thumbnails-image-width: 25vw;
+  --thumbnails-image-height: 15vw;
+  --thumbnails-title-height: calc(var(--thumbnails-image-height)*0.33);
+  --details-image-width: 70vw;
+  --details-image-height: 55vw;
+}
 body{
   height: 100%;
   background: url(../images/cars/wallpaper.jpg);
@@ -42,56 +50,78 @@ h2{
   align-items: center;
   margin-bottom: 25px;
 }
+.details-frame{
+  position: relative;
+}
 .details-image{
-  width: 90vw;
-  height: 55vw;
- 
-  
+ width: var(--details-image-width);
+ height: var(--details-image-height);
 }
 .details-title{
   display: block;
-  text-align: left;
-  background:none;
+  background: none;
   font-family: hussar;
+  position: absolute;
+  bottom: 2vh;
+  left: 3vw;
+  
 }
 .thumbnails-list{
   display: flex;
   flex-wrap: wrap;
-  max-height: 37vh;                          
+  max-height: 26vh;                          
   overflow-y: scroll;
   list-style: none;
   justify-content: space-around;
   padding-left: 0;
   margin-top: 25px;
+  padding-right: 7px;
+  margin-right: 10px;
 }
 .thumbnails-item{
   border: solid 2px white;
   margin-top: 2vh;
   border-radius: 25%;
   overflow: hidden;
+  min-height: calc(var(--thumbnails-image-height) + var(--thumbnails-title-height));
+  min-width: var(--thumbnails-image-width);
+  max-width: var(--thumbnails-image-width);
+  margin-left: 20px;
 }
-
+.thumbnails-item:hover{
+  transform: scale(1.1);
+}
 .thumbnails-anchor{
   text-decoration: none;
   color: white;
 }
 .thumbnails-image{
   display: block;
-  width: 25vw;
-  height: 15vw;
+  width: var(--thumbnails-image-width);
+  height: var(--thumbnails-image-height);
 
 }
 .thumbnails-title{
   display: block;
   text-align: center;
   background-color: black;
+  height: var(--thumbnails-title-height);
   
 }
 @media (min-width: 560px) 
 {
+  body
+{
+  --thumbnails-image-width: 20vw;
+  --thumbnails-image-height: 12vw;
+  --thumbnails-title-height: calc(var(--thumbnails-image-height)*0.2);
+  --details-image-width: 60vw;
+  --details-image-height: 35vw;
+}
   .main-class
   {
     flex-direction: row;
+    justify-content: space-around;
   }
   .logo{
     font-size: 1.55em
@@ -107,6 +137,11 @@ h2{
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .details-container {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
   .thumbnails-list
   {
     order: -1;
@@ -119,70 +154,27 @@ h2{
   }
   .thumbnails-item
   {
-    min-height: 15vw;
+   
     margin-top: 7px;
     margin-bottom: 7px;
   }
-  .thumbnails-image
-  {
-    width: 20vw;
-    height: 12vw;
-    
-  }
-  .details-image
-  {
-    width: 60vw;
-    height: 35vw;
-  }
-  .details-container
-  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px;
-  }
+  
+
   
 }
 @media (min-width: 1000px) 
 {
-  .main-class
-  {
-    flex-direction: row;
+  body{
+    --thumbnails-title-height: calc(var(--thumbnails-image-height)*0.1);
   }
   .logo{
     font-size: 2.85em;
   }
-  h2{
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  body
+    .thumbnails-item
   {
-    background: url(../images/cars/Wallpaper_gorizont.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .thumbnails-list
-  {
-    order: -1;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    max-height: 75vh;
-    justify-content: flex-start;
-    padding-right: 35px;
-    
-  }
-  .thumbnails-item
-  {
-    min-height: 16.5vw;
-    margin-top: 7px;
-    margin-bottom: 7px;
-  }
-  .thumbnails-image
-  {
-    width: 25vw;
-    height: 15vw;
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 0 5px grey;
   }
   .details-image
   {
@@ -196,6 +188,10 @@ h2{
     align-items: center;
     margin: 0px;
   }
-  
-  
+ 
+  .thumbnails-list {
+       
+    margin-top: 2.5vh;
+    max-height: 70vh;
+}
 }
