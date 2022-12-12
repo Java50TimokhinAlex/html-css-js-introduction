@@ -63,7 +63,7 @@ h2{
   font-family: hussar;
   position: absolute;
   bottom: 2vh;
-  left: 3vw;
+  left: 5%;
   
 }
 .thumbnails-list{
@@ -193,5 +193,13 @@ h2{
        
     margin-top: 2.5vh;
     max-height: 70vh;
+}
+.details-title{
+  display: block;
+  background: none;
+  font-family: hussar;
+  position: absolute;
+  bottom: 2vh;
+  left: 25%;
 }
 }
