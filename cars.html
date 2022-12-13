@@ -12,9 +12,10 @@
   <header class="logo">
     <h2 style="color: white;">Audi Garage</h2> 
   </header>
-  <main class="main-class">
+  <main class="main-class hidden">
     <section class="details-container">
       <div class="details-frame">
+        <button id="hide-button">X</button>
         <img src="images/cars/main.png" class="details-image">
         <span class="details-title" style="color: white; text-align: center;">
         DREAMS COME TRUE. ALL YOU NEED - JUST CHOOSE!
@@ -23,43 +24,169 @@
     </section>
     <ul class="thumbnails-list">
       <li class="thumbnails-item">
-        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/aud-q3.jpg" data-details-title="You choose AUDI Q3! You have a great taste in cars!">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/aud-q3.jpg" data-details-title="You choose AUDI Q3! You have a great taste in cars!" data-text-color="red">
           <img src="images/cars/aud-q3.jpg" class="thumbnails-image round">
           <span class="thumbnails-title">AUDI Q3</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/Audi_A5.jpg" data-details-title="You choose AUDI A5! You have a great taste in cars!">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/Audi_A5.jpg" data-details-title="You choose AUDI A5! You have a great taste in cars!" data-text-color="yellow">
           <img src="images/cars/Audi_A5.jpg" class="thumbnails-image round">
           <span class="thumbnails-title">AUDI A5</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-a7.jpg" data-details-title="You choose AUDI A7! You have a great taste in cars!">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-a7.jpg" data-details-title="You choose AUDI A7! You have a great taste in cars!" data-text-color="green">
           <img src="images/cars/audi-a7.jpg" class="thumbnails-image round">
           <span class="thumbnails-title">AUDI  A7</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-q7.jpg" data-details-title="You choose AUDI Q7! You have a great taste in cars!">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-q7.jpg" data-details-title="You choose AUDI Q7! You have a great taste in cars!" data-text-color="blue">
           <img src="images/cars/audi-q7.jpg" class="thumbnails-image round">
           <span class="thumbnails-title">AUDI  Q7</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-tt.jpg" data-details-title="You choose AUDI TT! You have a great taste in cars!">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-tt.jpg" data-details-title="You choose AUDI TT! You have a great taste in cars!" data-text-color="grey">
           <img src="images/cars/audi-tt.jpg" class="thumbnails-image round">
           <span class="thumbnails-title">AUDI  TT</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi_a1.jpg" data-details-title="You choose AUDI A1! You have a great taste in cars!">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi_a1.jpg" data-details-title="You choose AUDI A1! You have a great taste in cars!" data-text-color="orange">
           <img src="images/cars/audi_a1.jpg" class="thumbnails-image round">
           <span class="thumbnails-title">AUDI  A1</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/Audi_A6.jpg" data-details-title="You choose AUDI A6! You have a great taste in cars!">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/Audi_A6.jpg" data-details-title="You choose AUDI A6! You have a great taste in cars!" data-text-color="black">
+          <img src="images/cars/Audi_A6.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  A6</span>
+        </a>
+      </li>  
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/aud-q3.jpg" data-details-title="You choose AUDI Q3! You have a great taste in cars!" data-text-color="red">
+          <img src="images/cars/aud-q3.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI Q3</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/Audi_A5.jpg" data-details-title="You choose AUDI A5! You have a great taste in cars!" data-text-color="yellow">
+          <img src="images/cars/Audi_A5.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI A5</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-a7.jpg" data-details-title="You choose AUDI A7! You have a great taste in cars!" data-text-color="green">
+          <img src="images/cars/audi-a7.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  A7</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-q7.jpg" data-details-title="You choose AUDI Q7! You have a great taste in cars!" data-text-color="blue">
+          <img src="images/cars/audi-q7.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  Q7</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-tt.jpg" data-details-title="You choose AUDI TT! You have a great taste in cars!" data-text-color="grey">
+          <img src="images/cars/audi-tt.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  TT</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi_a1.jpg" data-details-title="You choose AUDI A1! You have a great taste in cars!" data-text-color="orange">
+          <img src="images/cars/audi_a1.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  A1</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/Audi_A6.jpg" data-details-title="You choose AUDI A6! You have a great taste in cars!" data-text-color="black">
+          <img src="images/cars/Audi_A6.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  A6</span>
+        </a>
+      </li>  
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/aud-q3.jpg" data-details-title="You choose AUDI Q3! You have a great taste in cars!" data-text-color="red">
+          <img src="images/cars/aud-q3.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI Q3</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/Audi_A5.jpg" data-details-title="You choose AUDI A5! You have a great taste in cars!" data-text-color="yellow">
+          <img src="images/cars/Audi_A5.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI A5</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-a7.jpg" data-details-title="You choose AUDI A7! You have a great taste in cars!" data-text-color="green">
+          <img src="images/cars/audi-a7.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  A7</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-q7.jpg" data-details-title="You choose AUDI Q7! You have a great taste in cars!" data-text-color="blue">
+          <img src="images/cars/audi-q7.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  Q7</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-tt.jpg" data-details-title="You choose AUDI TT! You have a great taste in cars!" data-text-color="grey">
+          <img src="images/cars/audi-tt.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  TT</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi_a1.jpg" data-details-title="You choose AUDI A1! You have a great taste in cars!" data-text-color="orange">
+          <img src="images/cars/audi_a1.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  A1</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/Audi_A6.jpg" data-details-title="You choose AUDI A6! You have a great taste in cars!" data-text-color="black">
+          <img src="images/cars/Audi_A6.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  A6</span>
+        </a>
+      </li>  
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/aud-q3.jpg" data-details-title="You choose AUDI Q3! You have a great taste in cars!" data-text-color="red">
+          <img src="images/cars/aud-q3.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI Q3</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/Audi_A5.jpg" data-details-title="You choose AUDI A5! You have a great taste in cars!" data-text-color="yellow">
+          <img src="images/cars/Audi_A5.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI A5</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-a7.jpg" data-details-title="You choose AUDI A7! You have a great taste in cars!" data-text-color="green">
+          <img src="images/cars/audi-a7.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  A7</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-q7.jpg" data-details-title="You choose AUDI Q7! You have a great taste in cars!" data-text-color="blue">
+          <img src="images/cars/audi-q7.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  Q7</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi-tt.jpg" data-details-title="You choose AUDI TT! You have a great taste in cars!" data-text-color="grey">
+          <img src="images/cars/audi-tt.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  TT</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/audi_a1.jpg" data-details-title="You choose AUDI A1! You have a great taste in cars!" data-text-color="orange">
+          <img src="images/cars/audi_a1.jpg" class="thumbnails-image round">
+          <span class="thumbnails-title">AUDI  A1</span>
+        </a>
+      </li>
+      <li class="thumbnails-item">
+        <a class="thumbnails-anchor" href="#" data-details-image="images/cars/Audi_A6.jpg" data-details-title="You choose AUDI A6! You have a great taste in cars!" data-text-color="black">
           <img src="images/cars/Audi_A6.jpg" class="thumbnails-image round">
           <span class="thumbnails-title">AUDI  A6</span>
         </a>
