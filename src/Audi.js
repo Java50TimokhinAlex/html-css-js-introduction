@@ -15,7 +15,7 @@ function stopMusic(audioAnchor) {
 
 
 function playMusic(anchor) {
-  // pause all tracks
+  
   const audios = document.getElementsByTagName("audio");
   for (let i = 0; i < audios.length; i++) {
       stopMusic(audios[i])
