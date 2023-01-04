@@ -1,112 +1,52 @@
-// const ar = [];
-// const ar1 = [1,2,3,4]
-// ar.push(...ar1); //spread  потрошит  массив на элементы
-// ar.push('abc');
+const array =  [10, 20, 30, -10, 11, 100];
+array.splice(2, 2);
+console.log(array.join("."))
 
-// function getRandomNumber(min, max) {
- 
-//   return min + Math.trunc(Math.random() * (max - min + 1));
-// }
-// // for(let i = 0;i < 10; i++){
-// //   console.log(getRandomNumber(0,2))
-// // }
-// function getRandomMatrix(raws, columns, min, max) {
-//   const matrix = [];
-//   for(let i = 0; i < raws; i++){
-//     matrix.push([]);
-//     for(let j = 0; j<columns; j++){
-//       matrix[i].push(getRandomNumber (min, max));
-//     }
-//   }
-//   return matrix;
-// }
-// const matrix = getRandomMatrix(3, 4, 0, 2);
+ const index = array.indexOf(30);
 
-const ar10 = [1,2,3,4,5,6];
-const str = ar10.join('_'); 
+//  delete 
+// (removing all numbers from 30)
+const res = array.splice(index, 10)
+array.splice(index, array.length, -1000);
 
+// insert
+array.splice(index, 0, -10, -20);
 
-const strClass = getRandomNumber(0,1) === 0? "white" : "black";
-const str1 = "hello";
-const str2 = 'hello ' + '"world"';
-const str3 = `color= + "${strClass}"`;
+// replace
+array.splice(index, 2, 20);
+const ar11 = [40, 200];
+array.splice(index, 1, ...ar11)
 
+const numbersPerPage = 2;
+const page = 2;
+const firstIndex = (page - 1) * numbersPerPage;
+const lastIndex = firstIndex + numbersPerPage;
+const pageNumbers = array.slice(firstIndex, lastIndex)
 
+// __________________________________________________
 
-
-
-
-
-// const ar = [] ;
-// const ar1 = [1,2,3,4,]
-// ar.push(...ar1);
-// ar.push('abc');
-function getRandomNumber(min, max) {
-   
-  return min + Math.trunc(Math.random() * (max - min + 1));
-}
-function getRandomMatrix(rows, columns, min, max){
-  const matrix = [];
-  for(let i = 0; i < rows; i++) {
-      matrix.push([]);
-      for (let j = 0; j < columns; j++) {
-          matrix[i].push(getRandomNumber(min, max))
-      }
-  }
-  return matrix;
-}
-//const matrix = getRandomMatrix(3, 4, 0, 1);
-
-//HTML
-//<ul class="list_class">
-//  <li class="item_class">
-//     <div class="white"> </div>
-//  </li>
-// .............
-//<li class="item_class">
-//     <div class="black"> </div>
-//  </li>
-//</ul>
-function getHtmlUl(array) {
- 
-  return `<ul class="list_class">
-    ${getListItems(array)}
-    </ul>`;
-}
-function getListItems(array) {
-  const res = [];
-  for(let i = 0; i < array.length; i++) {
-      res[i] = `
-              <li class="item_class">
-                  <div class="${array[i] === 0 ? "white" : "black"}">
-                  <div class="${array[i] === 0 ? "white" : "black"}">
-                   </div>
-               </li>`
-  }
-  return res.join('');
+const ar1 = array.map(multiply2);
+function multiply2(numbers) {
+  return numbers * 2;
 }
 
-function matrixTransp(matrix) {
-  //TODO
-  //returns transp matrix
-  // matrix = [[1, 2], //input
-  //           [3, 4], 
-  //           [4, 5]        
-  //            ]
-  //  output   [1, 3, 4]
-  //           [2, 4, 5] 
-  const res =[];
-  for(let i = 0; i < matrix[0].length; i++){
-      res[i] = [];
-      for(let j = 0; j < matrix.length; j++) {
-          res[i][j] = matrix[j][i];
-      }
-  }
-  return res;
-}
-const matrix = [[1, 2], 
-            [3, 4], 
-            [4, 5]        
-             ];
-//console.log(matrixTransp(matrix));
-console.log(getHtmlUl([1,0,1,0,1,0]))
+const ar2 = array.map(function(number, index)
+{
+  return index + 1 + ". " + number;
+});
+
+const ar3 = array.map(function(number) {
+  return `<li>${number}</li>`
+})
+const ulElement = `<ul>${ar3.join('')}</ul>`
+
+// __________________________________________________
+const min = 2;
+const max = 15;
+const ar4 = array.filter(function(number) {
+  return number >= min && number <= max;
+})
+
+const ar5 = array.filter(function(__, index) {
+  return index % 2 === 0;
+})
