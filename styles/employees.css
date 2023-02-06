@@ -1,0 +1,13 @@
+#tabs-list {
+  display: flex;
+  padding: 8px;
+  gap: 8px;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #eee;
+  background-color: azure;
+}
+
+.active-tab {
+  background-color: cadetblue;
+  color: #eee
+}

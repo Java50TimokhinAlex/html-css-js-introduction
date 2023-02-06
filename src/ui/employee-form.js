@@ -1,13 +1,13 @@
 import { employeeConfig } from "../config/employee-config.js";
 
 export class EmployeeForm {
-  #formElement;
+  #formElement = "employee-form";
   #citiesElement;
   #countriesElement;
   #inputElements;
   constructor(idParentForm) {
     const parentFormElement = document.getElementById(idParentForm);
-    if(!parentFormElement) {
+    if (!parentFormElement) {
       throw `wrong parent id ${idParentForm}`;
     }
     parentFormElement.innerHTML = `
@@ -34,36 +34,44 @@ export class EmployeeForm {
       <button type="reset">Reset</button>
     </div>
   </form>
-    `
+    `;
     this.#formElement = document.getElementById("employee-form");
     this.#countriesElement = document.getElementById("countries");
     this.#citiesElement = document.getElementById("cities");
     this.#inputElements = document.querySelectorAll("#employee-form [name]");
     this.setCountries();
     this.setCities();
-    this.#countriesElement.addEventListener("change", () => this.setCities())
+    this.#countriesElement.addEventListener("change", () => this.setCities());
   }
 
   setCountries() {
-    this.#countriesElement.innerHTML = Object.keys(employeeConfig.countries)
-    .map(country => `<option value="${country}">${country}</option>`)
+    this.#countriesElement.innerHTML = Object.keys(
+      employeeConfig.countries
+    ).map((country) => `<option value="${country}">${country}</option>`);
   }
+
   setCities() {
-    this.#citiesElement.innerHTML = employeeConfig.countries[this.#countriesElement.value]
-    .map(city => `<option value="${city}">${city}</option>`)
+    this.#citiesElement.innerHTML = employeeConfig.countries[
+      this.#countriesElement.value
+    ].map((city) => `<option value="${city}">${city}</option>`);
   }
+
   addFormHandler(handlerFun) {
-    this.#formElement.addEventListener('submit', (event) => {
-  event.preventDefault(); // canceling default handler of 'submit'
-  const employeeData = Array.from(this.#inputElements).reduce((res, inputElement) => {
-    res[inputElement.name] = inputElement.value
-    return res;
-  }, {});
-  const message = handlerFun(employeeData);
-  if(message) {
-    alert(message);
-  } else {this.#formElement.reset();
-  }
-})
+    this.#formElement.addEventListener("submit", (event) => {
+      event.preventDefault(); // canceling default handler of 'submit'
+      const employeeData = Array.from(this.#inputElements).reduce(
+        (res, inputElement) => {
+          res[inputElement.name] = inputElement.value;
+          return res;
+      }, {});
+
+      const message = handlerFun(employeeData);
+
+      if (message) {
+        alert(message);
+      } else {
+        this.#formElement.reset();
+      }
+    });
   }
 }
