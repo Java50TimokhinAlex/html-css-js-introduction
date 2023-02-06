@@ -15,8 +15,8 @@ export class Tabs {
     this.#sectionList = sections;
     if (sections.length) {
       const activeSecId = activeSectionId || sections[0].contentElementId;
-      this.#activeContentElementId = activeSectionId
-        
+      this.#activeContentElementId = activeSectionId;
+
       const tabsListElement = document.getElementById(this.#tabsListElement);
       const tabContentElement = document.getElementById(
         this.#tabContentElement
@@ -34,9 +34,10 @@ export class Tabs {
           this.#activeContentElementId
         }"></section>`;
 
-
-        const activeSection = sections.find(section => section.contentElementId = activeSecId)
-        this.setActive(activeSection)
+        const activeSection = sections.find(
+          (section) => (section.contentElementId = activeSecId)
+        );
+        this.setActive(activeSection);
       }
     }
   }
@@ -50,7 +51,13 @@ export class Tabs {
     if (section.executor && el) {
       section.executor();
     }
-    const btn = document.getElementById(section.id);
-    btn.style.background = "purple"
+    this.#sectionList.forEach((section) => {
+      const btn = document.getElementById(section.id);
+      if (section.id === this.#activeContentElementId) {
+        btn.classList.add("active-tab");
+      } else {
+        btn.classList.remove("active-tab");
+      }
+    });
   }
 }
