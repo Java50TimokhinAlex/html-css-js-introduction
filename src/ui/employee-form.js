@@ -13,8 +13,8 @@ export class EmployeeForm {
     parentFormElement.innerHTML = `
     <form id="employee-form">
     <input required name="name" type="text" placeholder="enter employee name" class="form-input">
-    <input required name="birthYear" type="number" placeholder="enter employee birthYear" class="form-input">
-    <input required name="salary" type="number" placeholder="enter employee salary" class="form-input">
+    <input required name="birthYear" type="number" placeholder="enter employee birthYear" class="form-input" min="1970" max="2001">
+    <input required name="salary" type="number" placeholder="enter employee salary" class="form-input" min="5000" max="50000">
     <div class="form-select-group">
       <label>Select Country</label>
       <select name="country" id="countries" class="form-select">
